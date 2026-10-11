@@ -54,11 +54,13 @@ fun DemoScreen(modifier: Modifier = Modifier) {
             fontWeight = FontWeight.Bold
         )
         Spacer(Modifier.height(16.dp))
-        CustomImage(R.drawable.vacation)
-        Modifier
-            .padding(16.dp)
-            .width(270.dp)
-            .clip(shape = RoundedCornerShape(30.dp))
+        CustomImage(R.drawable.vacation,
+            Modifier
+                .padding(16.dp)
+                .width(270.dp)
+                .clip(shape = RoundedCornerShape(30.dp))
+        )
+
 
     }
 }
