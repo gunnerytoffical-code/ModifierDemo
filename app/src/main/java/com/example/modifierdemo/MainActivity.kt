@@ -37,6 +37,9 @@ fun DemoScreen(modifier: Modifier = Modifier) {
         fontSize = 40.sp,
         fontWeight = FontWeight.Bold
     )
+    val mymodifier = modifier
+        .border(width = 2.dp, color = Color.Black)
+        .padding(all = 10.dp)
 }
 @Preview(showBackground = true)
 @Composable
@@ -45,6 +48,3 @@ fun DefaultPreview() {
         DemoScreen()
     }
 }
-val modifier = Modifier
-    .padding(all = 10.dp)
-    .border(width = 2.dp, color = Color.Black)
