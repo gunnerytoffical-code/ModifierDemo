@@ -18,6 +18,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.modifierdemo.ui.theme.ModifierDemoTheme
+import androidx.compose.ui.Alignment
+import androidx.compose.foundation.layout.*
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,6 +32,27 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+}
+
+@Composable
+fun DemoScreen(modifier: Modifier = Modifier) {
+    val mymodifier = modifier
+        .border(width = 2.dp, color = Color.Black)
+        .padding(all = 10.dp)
+    Column(
+        Modifier.padding(20.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
+        Text(
+            "Hello Compose",
+            mymodifier,
+            fontSize = 40.sp,
+            fontWeight = FontWeight.Bold
+        )
+        Spacer(Modifier.height(16.dp))
+        CustomImage(R.drawable.vacation)
     }
 }
 @Composable
