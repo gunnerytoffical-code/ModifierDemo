@@ -13,6 +13,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.example.modifierdemo.ui.theme.ModifierDemoTheme
 
 class MainActivity : ComponentActivity() {
@@ -43,4 +44,4 @@ fun DefaultPreview() {
         DemoScreen()
     }
 }
-val modifier = Modifier
+val modifier = Modifier.padding(all = 10.dp)
